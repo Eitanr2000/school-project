@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body, html {
+    font-family: 'Roboto', Arial, sans-serif;
+    min-height:auto;
+    color: #333;
+    background: linear-gradient(to bottom, #1976d2, #05264d);
+    line-height: 2.05;
+    display: flex;
+    flex-direction: column-reverse;
+    
+}
+
+.error{
+    font-size:large;
+    color:red;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
+.header-wrapper {
+    background: #1976d2;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .header-wrapper h1 {
+        font-size: 1.8rem;
+        margin: 0;
+        padding-right: 45%;
+    }
+
+.logo {
+    width: 50px;
+    transform: rotate(180deg);
+    border-radius: 50%;
+}
+
+
+.container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    padding: 20px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+    min-height: 593px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #90caf9;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+    .btn:hover {
+        background: #1976d2;
+        transform: translateY(-2px);
+    }
+
+/* Скрыть радиокнопки */
+input[type="radio"] {
+    display: none;
+}
+
+/* Стили для кнопок (меток) */
+label.btn {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #90caf9;
+    transition: background 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+    label.btn:hover {
+        background: #1976d2;
+        transform: translateY(-2px);
+    }
+
+#register-form {
+    display:none;
+}
+
+
+/* Формы */
+form {
+    text-align: left;
+}
+
+    form h2 {
+        font-size: 1.5rem;
+        color: #1976d2;
+        margin-bottom: 10px;
+    }
+
+    form input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    form button[type="submit"], button[type="reset"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px;
+        background: linear-gradient(to right, #64b5f6, #1976d2);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+.sug {
+    text-align: right;
+    max-width: 400px;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-left: 10px;
+}
+
+    input[type="checkbox"] + label {
+        font-size: 16px;
+        color: #333;
+        display: inline-block;
+        cursor: pointer;
+        margin-bottom: 5px;
+    }
+
+form button[type="submit"]:hover, button[type="reset"]:hover {
+    background: #1976d2;
+    transform: translateY(-3px);
+}
+
+/* Футер */
+footer {
+    background: #05264d;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    margin-bottom:0px; /* Перемещает footer в конец страницы */
+}

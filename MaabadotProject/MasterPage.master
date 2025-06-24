@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <title>phisic</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="header-wrapper" style="direction:ltr">
+        <button id="register" type="button" onclick="window.location.href='../register.aspx'" runat="server">Register/login</button>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;"> 
+            <h2 runat="server" visible="false" id="wellcome"><%="wellcome " + Session["userName"] %></h2>
+            <a href="sites/admin.aspx" runat="server" id="admin"><h2>admin Panel</h2></a>
+            <button style="padding: 5px 20px; width: max-content; min-width: 120px;background-color:forestgreen;" runat="server" visible="false" id="log_out" onserverclick="logout">log out</button>
+        </div>       
+        <h3 style="direction:ltr">current:</h3> 
+        <h3 style="direction:ltr" id="curr" runat="server"></h3>
+        <h1>מעבדות בפיזיקה</h1>
+        <h3 style="direction:ltr">total:</h3> 
+        <h3 style="direction:ltr" id="total" runat="server">
+        </h3>
+        <a href="../main.aspx"><img src="../img/logo.png" alt="Logo" class="logo"></a>
+    </div>
+    <hr>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <footer>כל הזכויות שמורות ל איתן רויזנגורט &copy;</footer>
+</body>
+</html>
